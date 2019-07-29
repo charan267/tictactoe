@@ -22,6 +22,10 @@ const calculateWinner = (squares) => {
     return { winner: null, winnerRow: null };
   };
   
+  const getLocation = (move) => {
+   
+    return locationMap[move];
+  };
 class Game extends React.Component{
     constructor(props){
         super(props);
