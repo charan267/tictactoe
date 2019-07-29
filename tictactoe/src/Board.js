@@ -36,11 +36,7 @@ class Board extends React.Component{
     }
 
     render(){
-        return 
-            <div>
-            {this.createBoard(3, 3)}
-            </div>;
-        
+        return<div>{this.createBoard(3, 3)}</div>;        
     }
 }
 
