@@ -52,6 +52,7 @@ class Game extends React.Component{
             xIsNext: true,
           };
     }
+    
     handleClick(i) {
         const history = this.state.history.slice(0, this.state.currentStepNumber + 1);
         const current = history[history.length - 1];
@@ -84,8 +85,9 @@ class Game extends React.Component{
           history: this.state.history.reverse(),
         });
       }
+
     render() {
-        const { history } = this.state;
+    const { history } = this.state;
     const current = history[this.state.currentStepNumber];
     const { winner, winnerRow } = calculateWinner(current.squares);
 
@@ -111,6 +113,7 @@ class Game extends React.Component{
     } else {
       status = `Next player: ${this.state.xIsNext ? 'X' : 'O'}`;
     }
+
         return (
             <div className="game">
                 <div className="game-board">
@@ -128,7 +131,7 @@ class Game extends React.Component{
                 <ol>{moves}</ol>
                 </div>
             </div>
-        )
+        );
     }
 }
 
