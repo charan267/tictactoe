@@ -1,5 +1,5 @@
 import React from 'react'
-
+import Square from './Square';
 
 class Board extends React.Component{
     createBoard(row, col) {
@@ -17,11 +17,21 @@ class Board extends React.Component{
       }
     
       renderSquare(i) {
-        
-    
-        return{
+        const winnerClass =
+          this.props.winnerSquares &&
+          (this.props.winnerSquares[0] === i ||
+            this.props.winnerSquares[1] === i ||
+            this.props.winnerSquares[2] === i)
+            ? 'square--green'
+            : '';
+ 
+         return (
+           <Square
+
+           />
+          );
          
-      }
+      
     }
 
     render(){
