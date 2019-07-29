@@ -28,4 +28,12 @@ ul {
     text-align: center;
     width: 54px;
   }
+
+  .square--green {
+    background: green;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
   
