@@ -1,4 +1,5 @@
 import React from 'react';
+import Board from './Board';
 
 const calculateWinner = (squares) => {
     const lines = [
@@ -23,9 +24,21 @@ const calculateWinner = (squares) => {
   };
   
   const getLocation = (move) => {
-   
+    const locationMap = {
+      0: 'row: 1, col: 1',
+      1: 'row: 1, col: 2',
+      2: 'row: 1, col: 3',
+      3: 'row: 2, col: 1',
+      4: 'row: 2, col: 2',
+      5: 'row: 2, col: 3',
+      6: 'row: 3, col: 1',
+      7: 'row: 3, col: 2',
+      8: 'row: 3, col: 3',
+    };
+  
     return locationMap[move];
   };
+
 class Game extends React.Component{
     constructor(props){
         super(props);
@@ -58,6 +71,12 @@ class Game extends React.Component{
           ]),
           xIsNext: !this.state.xIsNext,
           currentStepNumber: history.length,
+        });
+      }
+      jumpTo(step) {
+        this.setState({
+          currentStepNumber: step,
+          xIsNext: step % 2 === 0,
         });
       }
     sortMoves() {
