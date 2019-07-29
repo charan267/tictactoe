@@ -2,15 +2,16 @@ import React from 'react'
 
 
 class Board extends React.Component{
-    constructor(props){
-        super(props);
-    }
+    createBoard(row, col) {
+        
+        return board;
+      }
+    
 
-    render() {
-
+    render(){
         return (
             <div>
-
+            {this.createBoard(3, 3)}
             </div>
         )
     }
