@@ -16,6 +16,13 @@ class Board extends React.Component{
         return board;
       }
     
+      renderSquare(i) {
+        
+    
+        return{
+         
+      }
+    }
 
     render(){
         return (
