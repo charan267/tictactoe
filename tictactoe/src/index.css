@@ -7,3 +7,10 @@ body {
 ul {
   padding-left: 30px;
 }
+
+.board-row:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  
